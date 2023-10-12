@@ -1,0 +1,29 @@
+{
+  "name": "vp23",
+  "version": "1.0.0",
+  "description": "veebiprogrammeerimise kursuse käigus loodud veeb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Mithyrus@github.com/Mithyrus/veeb2.git"
+  },
+  "keywords": [
+    "veebiprogrammeerimine",
+    "NodeJS",
+    "ExpressJS",
+    "Tallinna",
+    "Ülikool"
+  ],
+  "author": "Sten Reins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mithyrus/veeb2/issues"
+  },
+  "homepage": "https://github.com/Mithyrus/veeb2#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

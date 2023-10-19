@@ -23,6 +23,11 @@ const dateNowET = function(){
 	return timeNow.getDate() + ". " + monthNamesET[timeNow.getMonth()] + " " + timeNow.getFullYear();
 }
 
+const dateNowETShort = function(){
+	let timeNow = new Date();
+	//return timeNow.getDate() + "." + (timeNow.getMonth() + 1) + "." + timeNow.getFullYear();
+	return timeNow.getDate() + "/" + timeNow.getMonth() + "/" + timeNow.getFullYear();
+}
 const timeNowET = function(){
 	let timeNow = new Date();
 	return timeNow.getHours() + ":" + timeNow.getMinutes() + ":" + timeNow.getSeconds();
@@ -47,4 +52,4 @@ const timeOfDayET = function(){
 }
 
 //moodul ekspordib need asjad
-module.exports = {dateNowET: dateNowET, timeNowET: timeNowET, monthtsET: monthNamesET, timeOfDayET: timeOfDayET, dateNowEN: dateNowEN, timeNowEN: timeNowEN, dateNowENShort: dateNowENShort, monthsEN: monthNamesEN};
+module.exports = {dateNowET: dateNowET, timeNowET: timeNowET, monthtsET: monthNamesET, timeOfDayET: timeOfDayET, dateNowEN: dateNowEN, timeNowEN: timeNowEN, dateNowENShort: dateNowENShort, monthsEN: monthNamesEN, dateNowETShort: dateNowETShort};

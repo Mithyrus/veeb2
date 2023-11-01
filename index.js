@@ -112,4 +112,27 @@ app.post('/eestifilm/lisapersoon', (req, res) =>{
     });
 });
 
+app.get ('/eestifilm/singlemovie', (req, res) =>{
+    let sqlresult = [];
+    res.render('eestifilmsinglemovie', {data: sqlresult});
+});
+
+app.post('/eestifilm/singlemovie', (req, res) =>{
+    //console.log(req.body);
+    let sqlresult = [];
+    let sql = 'SELECT title, production_year, duration, description FROM movie WHERE id = ?';
+    conn.query(sql, req.body.movieId, (err, result) =>{
+        if (err){
+            throw err;
+            res.render('eestifilmsinglemovie', {data: sqlresult});
+        }
+        else {
+            sqlresult = result;
+            res.render('eestifilmsinglemovie', {data: sqlresult});
+        //console.log(sqlresult);
+            
+        }
+    });
+});
+
 app.listen(5211);

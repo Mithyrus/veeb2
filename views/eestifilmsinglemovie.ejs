@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sten Reins, veebiprogrammeerimine 2023</title>
+</head>
+<body>
+    <img src="banner/banner.png" alt="veebiprogrammeerimise kursuse banner">
+    <h1>Leia film</h1>
+    <ul>
+        <li><a href="/eestifilm">Eesti filmide avaleht</a></li>
+        <li><a href="/">Avalehele</a></li>
+    </ul>
+    <hr>
+    <h2>Lisa filmi ID</h2>
+    <form method="POST">
+        <label for="movieId">Filmi id</label>
+        <input type="number" name="movieId" id="movieId" placeholder="Id..." required>
+        <br>
+        <input type="submit" name="personSubmit" value="Salvesta">
+    </form>
+    <br>
+    <ol><% data.forEach(function(film) { %>
+        <h3>Pealkiri</h3>
+        <p><%= film.title %></p>
+        <h3>Valmimisaasta</h3>
+        <p><%= film.production_year %></p>
+        <h3>Kestvus</h3>
+        <p><%= film.duration %> minutit</p>
+        <h3>Kirjeldus</h3>
+        <p><%= film.description %></p>
+        <% }); %>
+    </ol>
+    
+</body>
+</html>

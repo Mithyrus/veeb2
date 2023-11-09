@@ -135,4 +135,15 @@ app.post('/eestifilm/singlemovie', (req, res) =>{
     });
 });
 
+app.get('/news', (req, res) => {
+    res.render('news');
+});
+
+app.get('/news/add', (req, res) => {
+    res.render('addnews');
+});
+
+app.get('/news/read', (req, res) => {
+    res.render('readnews');
+});
 app.listen(5211);
